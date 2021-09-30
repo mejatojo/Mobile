@@ -1,0 +1,18 @@
+
+
+<ion-content>
+  <div id="formContainer" style="margin-top: 2cm;;">
+    <form id="login" method="post" action="./">
+      <a href="#" id="flipToRecover" class="flipLink">Forgot?</a>
+      <input type="text" name="loginEmail" id="loginEmail" placeholder="Votre nom" [(ngModel)]="email"/>
+      <input type="password" name="loginPass" id="loginPass"  placeholder="Mot de passe" [(ngModel)]="password"/>
+      <input type="submit" name="submit" value="Se connecter" (click)="seConnecter()"/>
+    </form>
+    
+  </div>
+<!-- 
+      <footer>
+        <h2><i>Tutorial:</i> Apple-like Login Form With CSS 3D Transforms</h2>
+          <a class="tzine" href="http://tutorialzine.com/2012/02/apple-like-login-form/">Head on to <i>Tutorial<b>zine</b></i> to download this example</a>
+      </footer> -->
+</ion-content>

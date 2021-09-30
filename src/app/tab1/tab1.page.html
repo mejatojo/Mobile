@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      A faire
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+  <ol style="margin-top: 1cm;">
+    <li *ngFor="let l of liste">
+      <p style="float:right">
+        <button style="margin-right: 1cm;">En cours</button>
+        <button>Terminer</button>
+      </p>
+      {{l.nom}}
+    </li>
+  </ol>
 </ion-content>

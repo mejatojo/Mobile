@@ -13,5 +13,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ol>
+    <li *ngFor="let l of liste">
+      {{l.nom}}
+    </li>
+  </ol>
 </ion-content>
