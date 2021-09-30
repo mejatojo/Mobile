@@ -9,18 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title>Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
-  <ol style="margin-top: 1cm;">
-    <li *ngFor="let l of liste">
-      <p style="float:right">
-        <button style="margin-right: 1cm;">En cours</button>
-        <button>Terminer</button>
-      </p>
-      {{l.nom}}
-    </li>
-  </ol>
+  <ion-list>
+    <ion-item *ngFor="let l of liste" >
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+       {{l.nom}}
+    </ion-item>
+  </ion-list>
 </ion-content>
