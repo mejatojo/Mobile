@@ -1,6 +1,34 @@
-
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
+  <form id="login" method="post" action="./">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" name="loginEmail" id="loginEmail" [(ngModel)]="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" name="loginPass" id="loginPass" [(ngModel)]="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="seConnecter()" >Sign In</ion-button>
+        <a href="#" id="flipToRecover" class="flipLink">Forgot?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
+<!-- <ion-content>
   <div id="formContainer" style="margin-top: 2cm;;">
     <form id="login" method="post" action="./">
       <a href="#" id="flipToRecover" class="flipLink">Forgot?</a>
@@ -8,11 +36,5 @@
       <input type="password" name="loginPass" id="loginPass"  placeholder="Mot de passe" [(ngModel)]="password"/>
       <input type="submit" name="submit" value="Se connecter" (click)="seConnecter()"/>
     </form>
-    
   </div>
-<!-- 
-      <footer>
-        <h2><i>Tutorial:</i> Apple-like Login Form With CSS 3D Transforms</h2>
-          <a class="tzine" href="http://tutorialzine.com/2012/02/apple-like-login-form/">Head on to <i>Tutorial<b>zine</b></i> to download this example</a>
-      </footer> -->
-</ion-content>
+</ion-content> -->
