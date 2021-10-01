@@ -16,8 +16,14 @@
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
   <ion-list>
     <ion-item *ngFor="let l of liste" >
+      
       <ion-icon name="checkmark-circle-outline"></ion-icon>
-       {{l.nom}}
+      
+       {{l.nom}} {{l.id}}
+       <div class="ion-text-end" style="margin-left: 1cm;">
+        <ion-button fill="outline" size="default" color="dark" (click)="afaire(l.id)">A faire</ion-button>
+        <ion-button  fill="solid" size="default" color="primary" (click)="encours()">En cours</ion-button>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

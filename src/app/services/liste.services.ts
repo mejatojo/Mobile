@@ -13,34 +13,18 @@ export class ListeService {
     {
       "id" : 1,
       "nom" : "meja",
-      "prenom" : "tojo",
+      "groupe" : "a",
     },
     {
       "id" : 2,
       "nom" : "nandy",
-      "prenom" : "lova",
+      "groupe" : "a",
     },
     {
       "id" : 3,
       "nom" : "meja",
-      "prenom" : "hope",
+      "groupe" : "b",
     }
-    ,
-    {
-      "id" : 3,
-      "nom" : "fsdfdsf",
-      "prenom" : "hofsdfpe",
-    },
-    {
-      "id" : 1,
-      "nom" : "fsd",
-      "prenom" : "fs",
-    },
-    {
-      "id" : 1,
-      "nom" : "fds",
-      "prenom" : "tosfsdfdsjo",
-    }, 
   ]
   constructor(private http: HttpClient,public router: Router) { }
   get(){
@@ -52,6 +36,12 @@ export class ListeService {
     {
       this.router.navigate(['/tabs/tab1']);
     }
+  }
+  afaire(id)
+  {
+    var a = this.list.find(x => x.id === id)
+    console.log(a)
+    a.nom = "ttt";
   }
 
 }

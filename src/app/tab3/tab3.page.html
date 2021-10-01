@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      A faire
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,13 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title>To do</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ol>
-    <li *ngFor="let l of liste">
-      {{l.nom}}
-    </li>
-  </ol>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+  <ion-list>
+    <ion-item *ngFor="let l of liste" >
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+       {{l.nom}}
+    </ion-item>
+  </ion-list>
 </ion-content>

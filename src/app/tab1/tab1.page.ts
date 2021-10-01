@@ -9,6 +9,11 @@ export class Tab1Page {
   liste: any
   constructor(private LS:ListeService) {}
   ngOnInit() {
-    this.liste = this.LS.get().filter( x => x.id === 1)
+    this.liste = this.LS.get().filter( x => x.groupe === "a")
+
+  }
+  afaire(id:number)
+  {
+    this.LS.afaire(id)
   }
 }
